@@ -1,0 +1,122 @@
+body {
+  margin: 30px;
+  background-color: #e4e4e1;
+  background-image: radial-gradient(
+      at top center,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(0, 0, 0, 0.03) 100%
+    ),
+    linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(143, 152, 157, 0.6) 100%
+    );
+  background-blend-mode: normal,
+    multiply;
+}
+h1 {
+  font-size: 55px;
+}
+h2 {
+  font-size: 45px;
+  text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h5 {
+  color: #fff;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+}
+h5 {
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  display: inline;
+  text-align: center;
+}
+p {
+  font-family: "Montserrat", sans-serif;
+}
+footer {
+  font-family: monospace;
+  text-align: center;
+  color: #fff;
+}
+a {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+.current-city {
+  padding: 40px;
+}
+.btn {
+  display: inline;
+  margin: 0 8px;
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(
+    120deg,
+    #fdfbfb 0%,
+    #ebedee 100%
+  );
+  color: black;
+  border: none;
+  float: right;
+}
+
+.btn:hover {
+  background-image: linear-gradient(
+    #434343 0%,
+    black 100%
+  );
+  color: #fff;
+  border: none;
+}
+
+.card {
+  text-align: center;
+  margin: 5px auto;
+  opacity: 85%;
+}
+.col-md {
+  padding: 0;
+}
+.grid {
+  display: block;
+  margin: 0 auto;
+}
+.container {
+  width: 60%;
+
+  background-image: linear-gradient(
+    #434343 0%,
+    black 100%
+  );
+  padding: 45px;
+  border-radius: 20px;
+  box-shadow: gray;
+}
+.card-body {
+  padding: 20px 10px;
+}
+.search {
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+}
+
+.weather-condition {
+  float: right;
+  margin-right: 25%;
+}
+.week-emoji {
+  text-align: center;
+}
+.white {
+  color: white;
+  font-size: 30px;
+}
+.week-emoji {
+  color: black;
+}

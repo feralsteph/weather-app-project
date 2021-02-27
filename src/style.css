@@ -120,3 +120,8 @@ a {
 .week-emoji {
   color: black;
 }
+.footer {
+  font-family: monospace;
+  text-align: center;
+  color: #fff;
+}

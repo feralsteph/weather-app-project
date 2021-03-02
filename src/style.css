@@ -40,15 +40,9 @@ h5 {
 p {
   font-family: "Montserrat", sans-serif;
 }
-footer {
-  font-family: monospace;
-  text-align: center;
-  color: #fff;
-}
 a {
   text-align: center;
   font-family: "Montserrat", sans-serif;
-
   color: #fff;
 }
 span {
@@ -56,6 +50,11 @@ span {
   position: relative;
   top: -28px;
   display: inline;
+}
+footer {
+  font-family: monospace;
+  text-align: center;
+  color: #fff;
 }
 .current-city {
   padding: 40px;
@@ -73,7 +72,6 @@ span {
   border: none;
   float: right;
 }
-
 .btn:hover {
   background-image: linear-gradient(
     #434343 0%,
@@ -91,10 +89,6 @@ span {
 .col-md {
   padding: 0;
 }
-.grid {
-  display: block;
-  margin: 0 auto;
-}
 .container {
   width: 60%;
 
@@ -109,11 +103,14 @@ span {
 .card-body {
   padding: 20px 10px;
 }
+.grid {
+  display: block;
+  margin: 0 auto;
+}
 .search {
   font-family: "Poppins", sans-serif;
   text-align: left;
 }
-
 .weather-condition {
   float: right;
   margin-right: 25%;
@@ -137,4 +134,7 @@ span {
 #temp-high,
 #temp-low {
   padding-bottom: 15px;
+}
+#city {
+  margin: 0;
 }

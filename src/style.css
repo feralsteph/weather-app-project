@@ -16,6 +16,7 @@ body {
 }
 h1 {
   font-size: 55px;
+  display: inline;
 }
 h2 {
   font-size: 45px;
@@ -50,6 +51,12 @@ a {
 
   color: #fff;
 }
+span {
+  font-size: 16px;
+  position: relative;
+  top: -28px;
+  display: inline;
+}
 .current-city {
   padding: 40px;
 }
@@ -78,7 +85,7 @@ a {
 
 .card {
   text-align: center;
-  margin: 5px auto;
+  margin: 25px auto;
   opacity: 85%;
 }
 .col-md {
@@ -127,8 +134,7 @@ a {
   color: #fff;
   font-size: 14px;
 }
-#units small {
-  font-size: 16px;
-  position: relative;
-  top: -28px;
+#temp-high,
+#temp-low {
+  padding-bottom: 15px;
 }

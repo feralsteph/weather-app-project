@@ -112,7 +112,7 @@ function showTemperature(response) {
     "#city"
   );
   locationElement.innerHTML = `${location}`;
-  temperatureElement.innerHTML = `${temperature}℉`;
+  temperatureElement.innerHTML = `${temperature}`;
   temperatureElementHigh.innerHTML = `H: ${temperatureHigh}℉`;
   temperatureElementLow.innerHTML = `| L: ${temperatureLow}℉`;
 }

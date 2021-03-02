@@ -99,6 +99,9 @@ function showTemperature(response) {
   let temperatureLow = Math.round(
     response.data.main.temp_min
   );
+  let weatherDescription =
+    response.data.weather[0].main;
+
   let temperatureElement = document.querySelector(
     "#temperature"
   );
@@ -111,11 +114,14 @@ function showTemperature(response) {
   let locationElement = document.querySelector(
     "#city"
   );
-
+  let weatherDescriptionElement = document.querySelector(
+    "#weather-description"
+  );
   locationElement.innerHTML = `${location}`;
   temperatureElement.innerHTML = `${temperature}`;
   temperatureElementHigh.innerHTML = `H: ${temperatureHigh}°`;
   temperatureElementLow.innerHTML = `| L: ${temperatureLow}°`;
+  weatherDescriptionElement.innerHTML = `${weatherDescription}`;
 }
 //Weather API with Latitude and Longitude
 function showPosition(position) {

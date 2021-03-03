@@ -117,11 +117,22 @@ function showTemperature(response) {
   let weatherDescriptionElement = document.querySelector(
     "#weather-description"
   );
+  let weatherIconElement = document.querySelector(
+    "#icon"
+  );
   locationElement.innerHTML = `${location}`;
   temperatureElement.innerHTML = `${temperature}`;
   temperatureElementHigh.innerHTML = `H: ${temperatureHigh}°`;
   temperatureElementLow.innerHTML = `| L: ${temperatureLow}°`;
   weatherDescriptionElement.innerHTML = `${weatherDescription}`;
+  weatherIconElement.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  weatherIconElement.setAttribute(
+    "alt",
+    response.data.weather[0].description
+  );
 }
 //Weather API with Latitude and Longitude
 function showPosition(position) {

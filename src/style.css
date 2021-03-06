@@ -41,7 +41,7 @@ h5 {
 p {
   font-family: "Montserrat", sans-serif;
 }
-a {
+#units {
   text-align: center;
   font-family: "Montserrat", sans-serif;
   color: #fff;
@@ -138,4 +138,7 @@ footer {
 }
 #city {
   margin: 0;
+}
+.card-title {
+  color: black;
 }

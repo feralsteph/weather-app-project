@@ -39,6 +39,19 @@ let currentTime = document.querySelector(
 currentDate.innerHTML = `${day}, ${month} ${date}, ${year}`;
 currentTime.innerHTML = `${time}`;
 
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
+}
+
 //Search Engine
 function city(event) {
   event.preventDefault();
@@ -79,6 +92,10 @@ function showWeather(event) {
   axios
     .get(`${apiURL}&appid=${apiKey}`)
     .then(showTemperature);
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${searchCity.value}&appid=${apiKey}&units=imperial`;
+  axios
+    .get(`${apiUrl}`)
+    .then(displayForecast);
 }
 let input = document.querySelector(
   "#city-search-form"
@@ -133,6 +150,48 @@ function showTemperature(response) {
     "alt",
     response.data.weather[0].description
   );
+}
+
+function displayForecast(response) {
+  let forecastElement = document.querySelector(
+    "#forecast"
+  );
+  forecastElement.innerHTML = null;
+  let forecast = null;
+  for (
+    let index = 0;
+    index < 6;
+    index++
+  ) {
+    let forecast =
+      response.data.list[index];
+    forecastElement.innerHTML += `<div class="col-md">
+          <div
+            class="card"
+            style="width: 8rem"
+          >
+            <div class="card-body">
+              <h5 class="card-title">
+                ${formatHours(
+                  forecast.dt * 1000
+                )}
+              </h5>
+              <img src="https://openweathermap.org/img/wn/${
+                forecast.weather[0].icon
+              }@2x.png" id="icon"
+                    alt="">
+              <p class="card-text">
+               <strong>${Math.round(
+                 forecast.main.temp_max
+               )}°</strong>/${Math.round(
+      forecast.main.temp_min
+    )}°
+              </p>
+            </div>
+          </div>
+        </div>`;
+  }
+  console.log(forecast);
 }
 //Weather API with Latitude and Longitude
 function showPosition(position) {
